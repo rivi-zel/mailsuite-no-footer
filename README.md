@@ -1,6 +1,6 @@
 # Mailsuite - No Footer
 
-An unofficial patched copy of Mailsuite **12.96.0** for Chrome. Its automatic promotional footer and unsubscribe link are disabled. The tracking code is unchanged; test it after installing.
+An unofficial patched copy of Mailsuite **12.96.1** for Chrome. Its automatic promotional footer and unsubscribe link are disabled. The tracking code is unchanged; test it after installing.
 
 ## Install
 
@@ -12,7 +12,7 @@ An unofficial patched copy of Mailsuite **12.96.0** for Chrome. Its automatic pr
 
 ## Updates
 
-The extension checks this repository's `version.json` on installation/startup and then daily, at most once per 24 hours. A newer version triggers a Chrome notification; click it to open the repository. Updates are installed manually. Checks fail silently while this repo is private or unavailable. Chrome/OS notification settings may hide the notification.
+The extension checks this repository's `version.json` on installation/startup and then daily, at most once per 24 hours. A newer version triggers a Chrome notification each day until it is installed; click it to open the repository. Updates are installed manually. Checks fail silently while this repo is private or unavailable. Chrome/OS notification settings may hide the notification.
 
 To publish an update, commit the new extension files with a higher `manifest.json` version and set `version.json` to that same version, with short release notes. Keep the default branch named `main`. Changing the repository name or owner requires updating `update-checker.js`. The update feed works once the repository is public.
 
