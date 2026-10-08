@@ -104,7 +104,7 @@
     "alarms"
   ],
   "update_url": "https://clients2.google.com/service/update2/crx",
-  "version": "12.96.0",
+  "version": "12.96.1",
   "web_accessible_resources": [
     {
       "matches": [
