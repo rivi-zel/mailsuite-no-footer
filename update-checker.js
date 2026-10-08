@@ -47,7 +47,6 @@
         await chrome.notifications.clear(NOTICE);
         return;
       }
-      if (state.notifiedVersion === release.version) return;
       const notes = typeof release.notes === "string" ? release.notes.replace(/[\r\n\t]+/g, " ").slice(0, 180) : "";
       await chrome.notifications.create(NOTICE, {
         type: "basic", iconUrl: chrome.runtime.getURL("images/icon-128.png"),
@@ -55,7 +54,7 @@
         message: `Version ${release.version} is available (installed: ${installed}). ${notes || "Click to open the repository and install the new build."}`,
         priority: 1
       });
-      await chrome.storage.local.set({ [STATE]: { checkedAt: now, notifiedVersion: release.version } });
+      await chrome.storage.local.set({ [STATE]: { checkedAt: now } });
     } catch (_) {
       // No notifications or console noise for failed update checks.
     } finally {
